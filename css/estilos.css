@@ -6,15 +6,56 @@
 
 body {
   font-family: "Roboto Condensed", sans-serif;
+  height: 100%;
+}
+p {
+  padding: 10px;
 }
 a {
   text-decoration: none;
 }
+a:not(#excepcion) {
+  text-decoration: wavy;
+}
+/* #excepcion {
+  text-decoration: double;
+} */
 
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 120px;
+  color: rgba(252, 252, 252, 0.788);
+  font-weight: 1000;
+  text-align: center;
+  line-height: 1.5;
+  background-color: rgba(0, 0, 0, 0.692);
+
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  padding: 0px 0px 20px 11px;
+  color: #fff;
+}
+h3 {
+  color: #fff;
+  font-size: 19px;
+  padding: 0px 0px 5px 11px;
+  margin-top: -90px;
+}
+h4 {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
 .padre {
   display: flex;
   flex-flow: column nowrap;
-  gap: 50px;
+  gap: 5px;
 }
 .margen-interno {
   padding: 0 50px;
@@ -24,18 +65,24 @@ a {
   background-position: 100;
   background-attachment: scroll;
   background-size: cover;
+  height: 460ch;
 
   display: flex;
   flex-flow: column nowrap;
+  flex: 1 1 50%;
+  flex-basis: 460ch;
+  /* justify-content: space-between; */
 }
 .menu {
   background: rgba(0, 0, 0, 0.3);
-  height: 70px;
+  height: 50ch;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
   display: flex;
   flex-flow: row nowrap;
+  flex: 1, 1, 50%;
+  justify-content: space-around;
 }
 .logo {
   color: rgb(238, 112, 9);
@@ -55,10 +102,10 @@ a {
 }
 .nav a {
   color: rgb(0, 0, 0);
-  font-size: 18px;
+  font-size: 100px;
   text-transform: uppercase;
   padding: 0 10px;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
 nav a:hover {
   color: #d0a51e;
@@ -77,88 +124,124 @@ nav a:hover {
 }
 .texto-principal {
   /* background-color: #f07b3f; */
-  height: 536px;
-  display: flex;
-  align-items: center;
-}
-h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 30px;
-  color: rgb(0, 0, 0);
-  font-weight: 1000;
-  text-align: center;
-  line-height: 2.9;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-h4 {
-  text-align: center;
+  height: 250ch;
+  width: 550ch;
+  margin: 0 0px;
+  padding-top: 50ch;
+  display: block;
+  flex: 1, 1, 25%;
+
+  /* position: relative; */
+
+  align-self: center;
 }
 .section {
   background: #f7f7f7;
 
   display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 10%;
+  height: 10px;
+  gap: 10px;
 }
 .articulos {
   background: #f7f7f7;
-  flex: 2 1 auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  flex: 1 1 30%;
+  justify-content: center;
   align-items: center;
+  align-content: center;
+  gap: 10px;
 }
 .article {
   color: #444;
   font-size: 19px;
-  letter-spacing: 1 px;
-  margin: 0px 10px 0 0px;
+  letter-spacing: 1px;
+  margin: 0px 00px 0 0px;
   background-color: #ececec;
-  width: 200px;
+  width: 2px;
 
-  flex: 1 1 45%;
+  flex: 2 1 40%;
 }
 .article img {
   width: 100%;
 }
-h3 {
+.article a {
   color: #fff;
-  font-size: 19px;
-  padding: 0px 0px 5px 4px;
-  margin-top: -90px;
+  font-size: 13px;
+  padding: 10px;
+  background: #000;
+  margin: 10px;
+  display: inline-block;
 }
-h2 {
-  font-size: 25px;
-  text-transform: uppercase;
-  padding: 0px 0px 20px 4px;
-  color: #fff;
+.article a:hover {
+  background: #546cc3;
 }
 .navegacion {
   background-color: #000;
-  flex: 1 1 100%;
+  height: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 50%;
+  align-items: center;
+  justify-content: center;
+}
+.navegacion a {
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  letter-spacing: 2px;
+}
+.navegacion a:hover {
+  background: #546cc3;
+  color: #fff;
 }
 .aside {
-  /* background-color: #f73f52; */
-  flex: 1 1 15%;
-  padding: auto;
   border-color: #f7f7f7;
+
+  /* background-color: #f73f52; */
+  /* padding: auto; */
   /* margin-left: auto; */
+  flex: 0 0 16%;
+
+  justify-content: space-between;
 }
 .aside img {
   width: 100%;
 }
 .publicidad {
-  background-color: #ffea85;
+  background-color: #fff;
 }
 .footer {
   background-color: #000;
+  height: 30px;
 
   display: flex;
+  flex: 1 1 16%;
   justify-content: center;
+  align-items: center;
+  align-self: flex-end center;
 }
 .pie {
-  background-color: #e6af2e;
+  /* background-color: #e6af2e; */
   width: 300px;
   text-align: center;
 }
+.pie a {
+  color: #fff;
+  font-size: 38px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  display: inline-block;
+  white-space: nowrap;
+}
+/* .klipper {
+  text-decoration: underline;
+} */
 
 @media all and (max-width: 800px) {
   .section {
